@@ -3,71 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dave</title>
+    <title>Password Protected Text</title>
     <style>
-        /* You can add CSS styles here */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
         }
-        header {
-            background-color: #2e2e99;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        main {
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
             padding: 20px;
         }
-        footer {
-            background-color: #2e2e99;
-            color: #fff;
+        input[type="password"] {
             padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .text-content {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Vítej!</h1>
-    </header>
-
-    <main>
-        <h2>Co dělám</h2>
-        <p><b>Já</b> - streamuji</p>
-        <p><b>Štofa</b> - shorty</p>
-        <p><b>Maty</b> - shorty + sem tam video</p>
-        <p><b>LipoGames</b> - videa</p>
-        <div class="container">
-            <h2>Welcome to the Secret Text</h2>
-            <p>Please enter the password to reveal the secret text:</p>
-            <input type="password" id="password" placeholder="Enter password">
-            <div class="text-content" id="text-content">
-                <p>This is the secret text that is only revealed when the correct password is entered.</p>
-            </div>
+    <div class="container">
+        <h2>Welcome to the Secret Text</h2>
+        <p>Please enter the password to reveal the secret text:</p>
+        <input type="password" id="password" placeholder="Enter password">
+        <div class="text-content" id="text-content">
+            <p>This is the secret text that is only revealed when the correct password is entered.</p>
         </div>
-    
-        <script>
-            document.getElementById('password').addEventListener('keyup', function(event) {
-                if (event.key === "Enter") {
-                    var password = document.getElementById('password').value;
-                    if (password === "Fuficek07123") { // Change "your_password_here" to your desired password
-                        document.getElementById('text-content').style.display = 'block';
-                    } else {
-                        alert('Incorrect password. Please try again.');
-                    }
-                }
-            });
-        </script>
-    </main>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Můj úžasňácký web. All rights reserved.</p>
-    </footer>
+    <script>
+        document.getElementById('password').addEventListener('keyup', function(event) {
+            if (event.key === "Enter") {
+                var password = document.getElementById('password').value;
+                if (password === "Fuficek07123") { // Change "your_password_here" to your desired password
+                    document.getElementById('text-content').style.display = 'block';
+                } else {
+                    alert('Incorrect password. Please try again.');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
