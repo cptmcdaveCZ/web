@@ -60,21 +60,19 @@
 </head>
 <!-- Konec headu -->
 <body>
-    <div style="float: right;">
-        <!--JS here -->
-        <script>
-            document.getElementById('password').addEventListener('keyup', function(event) {
-                if (event.key === "Enter") {
-                    var password = document.getElementById('password').value;
-                    if (password === "Sd-070503") { 
-                        document.getElementById('text-content').style.display = 'block';
-                    } else {
-                        alert('Incorrect password. Please try again.');
-                    }
+     <!--JS here -->
+    <script>
+         document.getElementById('password').addEventListener('keyup', function(event) {
+            if (event.key === "Enter") {
+                var password = document.getElementById('password').value;
+                if (password === "Sd-070503") { 
+                    document.getElementById('text-content').style.display = 'block';
+                 } else {
+                    alert('Špatný heslo, dál už to ani nezkoušej.');
                 }
-            });
-        </script>
-    </div>
+            }
+         });
+    </script>
     <!-- Header here-->
     <header>
         <h1>Vítej člověče!</h1>
