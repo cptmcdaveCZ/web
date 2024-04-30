@@ -52,32 +52,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dave</title>
-    
 </head>
 <body>
-    
-    <script>
-        document.getElementById('password').addEventListener('keyup', function(event) {
-            if (event.key === "Enter") {
-                var password = document.getElementById('password').value;
-                if (password === "Sd-070503") { 
-                    document.getElementById('text-content').style.display = 'block';
-                } else {
-                    alert('Incorrect password. Please try again.');
+    <div style="float: right;">
+        <script>
+            document.getElementById('password').addEventListener('keyup', function(event) {
+                if (event.key === "Enter") {
+                    var password = document.getElementById('password').value;
+                    if (password === "Sd-070503") { 
+                        document.getElementById('text-content').style.display = 'block';
+                    } else {
+                        alert('Incorrect password. Please try again.');
+                    }
                 }
-            }
-        });
-    </script>
+            });
+        </script>
+    </div>
     <header>
         <h1>Vítej!</h1>
     </header>
-
     <main>
         <h2>Co dělám</h2>
-        <p><b>Já</b> - streamuji</p>
-        <p><b>Štofa</b> - shorty</p>
-        <p><b>Maty</b> - shorty + sem tam video</p>
-        <p><b>LipoGames</b> - videa</p>
+        <p><b>Já</b> - streamuji <a href="https://www.twitch.tv/cpt_mcdave"> na Twitchi</a></p>
+        <p><b>Štofa</b> - shorty <a href="https://www.tiktok.com/@stoficekk_"> TikTok</a></p>
+        <p><b>Maty</b> - shorty + sem tam video <a href="https://www.youtube.com/@matyopat28"> na YT</a></p>
+        <p><b>LipoGames</b> - in progress...</p>
         <div class="container">
             <input type="password" id="password" placeholder=" ">
             <div class="text-content" id="text-content">
@@ -98,7 +97,6 @@
             });
         </script>
     </main>
-
     <footer>
         <p>&copy; 2024 Můj úžasňácký web. All rights reserved.</p>
     </footer>
